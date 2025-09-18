@@ -14,8 +14,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 180px;
-  height: 180px;
+  width: 240px;
+  height: 240px;
   font-family: "Inter", sans-serif;
   font-size: 1.2em;
   font-weight: 300;
@@ -29,7 +29,11 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 600px;
+  height: 600px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   background-color: transparent;
@@ -40,18 +44,18 @@ body {
 @keyframes loader-rotate {
   0% {
     transform: rotate(90deg);
-    box-shadow: 0 10px 20px 0 #fff inset, 0 20px 30px 0 #ad5fff inset,
-      0 60px 60px 0 #471eec inset;
+    box-shadow: 0 6px 12px 0 #fff inset, 0 12px 18px 0 #ad5fff inset,
+      0 30px 30px 0 #471eec inset;
   }
   50% {
     transform: rotate(270deg);
-    box-shadow: 0 10px 20px 0 #fff inset, 0 20px 10px 0 #d60a47 inset,
-      0 40px 60px 0 #311e80 inset;
+    box-shadow: 0 6px 12px 0 #fff inset, 0 12px 6px 0 #d60a47 inset,
+      0 20px 30px 0 #311e80 inset;
   }
   100% {
     transform: rotate(450deg);
-    box-shadow: 0 10px 20px 0 #fff inset, 0 20px 30px 0 #ad5fff inset,
-      0 60px 60px 0 #471eec inset;
+    box-shadow: 0 6px 12px 0 #fff inset, 0 12px 18px 0 #ad5fff inset,
+      0 30px 30px 0 #471eec inset;
   }
 }
 
@@ -131,9 +135,10 @@ body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(0, 0, 0, 0.7);
-  z-index: 9999;
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.7);
 }
+
