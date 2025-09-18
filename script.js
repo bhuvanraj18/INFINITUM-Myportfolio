@@ -76,15 +76,35 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-// Hide loader overlay when page is fully loaded
+// Hide loader overlay with smooth transition when page is fully loaded
 window.addEventListener('load', function() {
   var loader = document.getElementById('loader-overlay');
+  var mainContent = document.querySelector('body > .container'); // adjust selector if needed
+  if (mainContent) {
+    mainContent.style.transition = 'opacity 0.7s cubic-bezier(0.4,0,0.2,1)';
+    mainContent.style.opacity = '0';
+  }
   if (loader) {
+    loader.style.transition = 'opacity 0.7s cubic-bezier(0.4,0,0.2,1)';
     loader.style.opacity = '0';
     loader.style.pointerEvents = 'none';
     setTimeout(function() {
       loader.style.display = 'none';
-    }, 500);
+      if (mainContent) {
+        mainContent.style.opacity = '1';
+      }
+    }, 700);
+  } else if (mainContent) {
+    // fallback if loader not found
+    mainContent.style.opacity = '1';
+  }
+});
+
+// On DOMContentLoaded, hide main content until loader is gone
+window.addEventListener('DOMContentLoaded', function() {
+  var mainContent = document.querySelector('body > .container');
+  if (mainContent) {
+    mainContent.style.opacity = '0';
   }
 });
 
