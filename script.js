@@ -75,3 +75,16 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 });
+
+// Hide loader overlay when page is fully loaded
+window.addEventListener('load', function() {
+  var loader = document.getElementById('loader-overlay');
+  if (loader) {
+    loader.style.opacity = '0';
+    loader.style.pointerEvents = 'none';
+    setTimeout(function() {
+      loader.style.display = 'none';
+    }, 500);
+  }
+});
+
