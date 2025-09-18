@@ -107,4 +107,3 @@ window.addEventListener('DOMContentLoaded', function() {
     mainContent.style.opacity = '0';
   }
 });
-
