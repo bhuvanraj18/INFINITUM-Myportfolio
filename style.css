@@ -37,10 +37,14 @@ html {
 }
 .back-vid {
   position: fixed;
-  right: 0;
-  bottom: 0;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
   z-index: -1;
-  mix-blend-mode: overlay;
+  mix-blend-mode: screen;
+  pointer-events: none;
 }
 header {
   font-family: Against;
@@ -977,7 +981,7 @@ footer h1 {
     margin-top: -20%;
   }
   .hero-info h1 {
-  padding-bottom: 80px;
+    padding-bottom: 80px;
     line-height: 1.8;
     font-size: 40px;
     max-width: 400px;
@@ -1154,7 +1158,7 @@ footer h1 {
     padding: 15px;
     text-align: center;
   }
-  .card p{
+  .card p {
     right: 18%;
     font-size: 10px;
   }
@@ -1188,7 +1192,7 @@ footer h1 {
   }
   .project-info p {
     padding-bottom: 10px;
-    color:gray;
+    color: gray;
     font-size: 12px;
     line-height: 15px;
     text-align: left;
@@ -1211,7 +1215,7 @@ footer h1 {
     gap: 40px;
     padding: 20px;
   }
-  .skills-section h1{
+  .skills-section h1 {
     padding-top: 14px;
   }
   .skills-box {
@@ -1279,9 +1283,8 @@ footer h1 {
   .contact-box button {
     margin: 10px auto 10px auto;
   }
-  footer{
+  footer {
     margin-top: 20px;
-
   }
   footer h1 {
     font-size: 18px;
