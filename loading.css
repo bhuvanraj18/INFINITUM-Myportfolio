@@ -1,5 +1,5 @@
 body {
-background-color: #001f7c38;;
+background-color: #001f7c38;
   min-height: 100vh;
   min-width: 100vw;
   display: flex;
@@ -152,5 +152,6 @@ background-color: #001f7c38;;
     height: 280px;
   }
 }
+
 
 
